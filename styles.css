@@ -206,6 +206,7 @@ Nav {
     width: 100%;
     flex-wrap: wrap;
 }
+
 .language__name {
     position: absolute;
     bottom: 0;
@@ -214,6 +215,7 @@ Nav {
     font-size: 20px;
     opacity: 0;
 }
+
 .language:hover .language__name {
     transform: scale(1);
     opacity: .80;
@@ -231,10 +233,11 @@ Nav {
     border-radius: 20px;
     overflow: hidden;
     position: relative;
-   
+
 }
+
 .project__wrapper::before {
-    content:"" ;
+    content: "";
     position: absolute;
     top: 0;
     left: 0;
@@ -250,7 +253,7 @@ Nav {
     opacity: 0.7;
 }
 
-.Project:hover .project__img{
+.Project:hover .project__img {
     transform: scale(1.07);
     filter: blur(5px);
 }
@@ -258,4 +261,44 @@ Nav {
 
 .project__list {
     padding-top: 40px;
+}
+
+.project_description {
+    position: absolute;
+    top: 50%;
+    left: 90px;
+    transform: translateY(-50%);
+    max-width: 550px;
+    z-index: 3;
+    opacity: 0;
+
+}
+
+.project:hover .project_description {
+    opacity: 1;
+}
+
+.project_description--title {
+    font-size: 40px;
+
+}
+
+.project_description--para {
+    margin: 16px 0;
+}
+
+.project_description--link {
+    font-size: 20px;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
+
+
+.project_description--title,
+.project_description--subt-title,
+.project_description--para,
+.project_description--link {
+    text-align: left;
+    color: #fff;
 }
