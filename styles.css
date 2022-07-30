@@ -6,6 +6,7 @@
     margin: 0%;
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -16,7 +17,33 @@ h1 {
 
 a {
     text-decoration: none;
+    position: relative;
 }
+
+.link__hover-effect:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: black;
+    width: 0;
+    bottom: -3px;
+    right: 0;
+    transition: all 300ms ease;
+    
+}
+.link__hover-effect:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.link__hover-effect--white::after {
+    background-color: white;
+}
+
+.link__hover-effect--black::after {
+    background-color: #000;
+}
+
 
 h1,
 h2,
@@ -279,7 +306,7 @@ Nav {
     z-index: 3;
     opacity: 0;
     transition: transform 450ms, opacity 300ms;
-    
+
 
 }
 
@@ -332,6 +359,7 @@ Nav {
     justify-content: space-around;
     margin-bottom: 28px;
 }
+
 footer {
     background-color: #242424;
 }
@@ -353,14 +381,14 @@ footer {
 
 
 .footer__copyright,
-.footer__social--link  {
+.footer__social--link {
     color: #f8f8f8;
     padding: 8px 8px;
-    
+
 }
 
 .footer__logo--popper {
-    color:#f8f8f8;
+    color: #f8f8f8;
     position: absolute;
     right: 0;
     top: 30px;
@@ -368,12 +396,13 @@ footer {
     opacity: 0;
     transition: all 300ms ease;
 }
+
 .footer__anchor {
     position: relative;
-    margin-bottom:20px;
+    margin-bottom: 20px;
 }
 
 .footer__anchor:hover .footer__logo--popper {
-transform: translateX(60px);
-opacity: 1;
+    transform: translateX(60px);
+    opacity: 1;
 }
