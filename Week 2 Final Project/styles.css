@@ -17,6 +17,7 @@
 
 a {
     text-decoration: none;
+    color: black;
 }
 
 a:hover {
@@ -27,26 +28,67 @@ p {
     line-height: 1.5;
 }
 
+li {
+    list-style-type: none;
+    font-size: 12px;
+}
 
 /* nav */
 
 nav {
     height: 80px;
+    margin-top: 24px;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
 }
 
 
 .nav__container {
-    width: 100%;
-    max-width: 1200px;
     display: flex;
-    justify-content: space-between;
     padding: 0 24px;
-    margin: 0 auto;
+    margin: 0 auto; 
+    justify-content: space-between;
 }
 
 
 .treact__logo {
     max-width: 40px;
     max-height: 40px;
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav__list {
+    display:flex
+}
+
+.nav__link {
+    padding: 0 24px;
+}
+
+.sign__up {
+    color: white;
+    border: solid;
+    background-color: #6415FF;
+    padding: 0.75rem 2rem;
+    border-radius: 100px;
+   
+}
+
+.btn {
+    color: white;
+}
+
+.nav__link--primary {
+    display: flex;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
 }
